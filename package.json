@@ -1,0 +1,21 @@
+{
+	"name": "htmlreels-subscribe",
+	"author": "Paul Gordon",
+	"description": "Create HTML Reels subscribe buttons on websites",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "reels-subscribe.js",
+	"types": "reels-subscribe.d.ts",
+	"files": [
+		"reels.js",
+		"reels.min.js",
+		"reels.effects.js",
+		"reels.effects.min.js",
+		"reels.d.ts",
+		"reels.css",
+		"package.json"
+	],
+	"scripts": {
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/lib.debug.js > ./+build/lib.min.js"
+	}
+}

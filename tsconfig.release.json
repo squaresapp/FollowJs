@@ -1,0 +1,9 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outFile": "+build/reels-subscribe.js",
+	},
+	"exclude": [
+		"**/+build/**/*.ts",
+	],
+}

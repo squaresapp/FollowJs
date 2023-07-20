@@ -130,7 +130,7 @@ namespace Reels
 	{
 		const readers = getRecommendedReaders();
 		const ua = navigator.userAgent;
-		const platform = navigator.platform || "";
+		const platform = (navigator as any).userAgentData?.platform || navigator.platform || "";
 		
 		if (/Android\s+/.test(ua))
 			return readers.android;
@@ -141,7 +141,7 @@ namespace Reels
 		if (platform.startsWith("Mac"))
 			return readers.macos;
 		
-		if (/Windows/.test(ua))
+		if (/win/.test(platform))
 			return readers.windows;
 		
 		return readers.linux;

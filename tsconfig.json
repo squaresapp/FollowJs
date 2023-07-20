@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"outFile": "+build/lib.debug.js",
+		"outFile": "+build/reels-subscribe.debug.js",
 		"composite": true,
 		"module": "system",
 		"moduleResolution": "node",
@@ -25,7 +25,4 @@
 	"exclude": [
 		"**/+build/**/*.ts",
 	],
-	"references": [
-		
-	]
 }

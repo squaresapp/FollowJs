@@ -28,10 +28,10 @@ In order for an end user to be able to subscribe to an HTML Reels feed, they mus
 
 The meta tag is a space-separated list of key=value pairs, where the key is a well-known string that specifies the platform, and the URL is a download URL where the reader app can be found.
 
-If no such tag exists, this library defaults to using the downl URLs for [Rail](https://github.com/paul-go/Rail).
+If no such tag exists, this library defaults to using the download URLs for [Rail](https://github.com/paul-go/Rail).
 
 ```html
-<meta name="recommended-reader" content="
+<meta name="recommended-readers" content="
 	ios=https://itunes.apple.com/app/id1234
 	android=http://play.google.com/store/apps/details?id=com.app.name
 	macos=http://myapp.com/app.dmg
@@ -43,7 +43,6 @@ If no such tag exists, this library defaults to using the downl URLs for [Rail](
 ## Programmatic Usage
 
 ```typescript
-
 // Pass one or more arguments to the Reels.subscribe function
 // in order to display the dialog:
 Reels.subscribe(
@@ -61,7 +60,6 @@ Reels.setRecommendedReaders({
 	windows: "http://myapp.com/app.msi",
 	linux: "http://myapp.com/app.tar.gz",
 });
-
 ```
 
 

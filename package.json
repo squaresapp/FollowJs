@@ -16,6 +16,7 @@
 		"package.json"
 	],
 	"scripts": {
-		"bundle": "tsc -p tsconfig.release.json && terser ./+build/lib.debug.js > ./+build/lib.min.js"
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/lib.debug.js > ./+build/lib.min.js",
+		"serve": "http-server --ssl --cert ./test/cert.pem --key ./test/key.pem"
 	}
 }

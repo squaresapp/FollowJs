@@ -10,6 +10,7 @@
 		"syndi-button.js",
 		"syndi-button.min.js",
 		"syndi-button.d.ts",
+		"syndi-button.d.ts.map",
 		"package.json"
 	],
 	"scripts": {

@@ -7,7 +7,7 @@ This repository contains a library that renders *Subscribe* buttons on websites,
 Paste this script tag at the **bottom** of your HTML page:
 
 ```html
-<script src="syndi-button.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/syndi-button/syndi-button.min.js"></script>
 ```
 
 In order to create a button, create a hyperlink with the `data-reels-subscribe` attribute populated the feed URLs as shown below:

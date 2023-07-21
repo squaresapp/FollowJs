@@ -1,6 +1,9 @@
 
 namespace SyndiButton
 {
+	const attrName = "data-subscribe";
+	const metaKey = "recommended-readers";
+	
 	/** */
 	export async function subscribe(...feedUrls: string[])
 	{
@@ -175,7 +178,7 @@ namespace SyndiButton
 		return document.head.querySelector(`META[name=${metaKey}]`);
 	}
 	
-	const metaKey = "recommended-readers";
+	
 	
 	/** */
 	const defaultReaders: IReaders = {
@@ -190,7 +193,7 @@ namespace SyndiButton
 	
 	const setup = () =>
 	{
-		const qsa = document.querySelectorAll("A[data-reels-subscribe]");
+		const qsa = document.querySelectorAll(`A[${attrName}]`);
 		const anchors = Array.from(qsa) as HTMLAnchorElement[];
 		for (const anchor of anchors)
 			connectAnchor(anchor);
@@ -203,7 +206,7 @@ namespace SyndiButton
 		
 		anchor.addEventListener("click", () =>
 		{
-			const attr = anchor.getAttribute("data-reels.-subscribe") || "";
+			const attr = anchor.getAttribute(attrName) || "";
 			const urls = attr.split(/\s+/g);
 			subscribe(...urls);
 		});

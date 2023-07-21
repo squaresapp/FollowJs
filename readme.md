@@ -10,16 +10,16 @@ Paste this script tag at the **bottom** of your HTML page:
 <script src="https://cdn.jsdelivr.net/npm/syndi-button/syndi-button.min.js"></script>
 ```
 
-In order to create a button, create a hyperlink with the `data-reels-subscribe` attribute populated the feed URLs as shown below:
+In order to create a button, create a hyperlink with the `data-subscribe` attribute populated the feed URLs as shown below:
 
 ```html
-<a href="#" data-reels-subscribe="http://a.com/path-to-feed/">Subscribe!</a>
+<a href="#" data-subscribe="http://a.com/path-to-feed/">Subscribe!</a>
 ```
 
 You can subscribe to multiple feeds at once by specifying a space-separated list of feed URLs:
 
 ```html
-<a href="#" data-reels-subscribe="http://a.com/path-to-feed/ http://b.com/path-to-feed/">Subscribe!</a>
+<a href="#" data-subscribe="http://a.com/path-to-feed/ http://b.com/path-to-feed/">Subscribe!</a>
 ```
 
 ## Changing The Recommended Reader

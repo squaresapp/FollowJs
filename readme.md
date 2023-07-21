@@ -24,7 +24,7 @@ You can subscribe to multiple feeds at once by specifying a space-separated list
 
 ## Changing The Recommended Reader
 
-In order for an end user to be able to subscribe to an HTML Reels feed, they must have an HTML Reels reader app installed on their device. You can configure what reader you recommend to your users by including a `<meta>` tag in the `<head>` section of your HTML, as shown below. 
+In order for an end user to be able to subscribe to an HTML Syndication, they must have a compatible reader app installed on their device. You can configure what reader you recommend to your users by including a `<meta>` tag in the `<head>` section of your HTML, as shown below. 
 
 The meta tag is a space-separated list of key=value pairs, where the key is a well-known string that specifies the platform, and the URL is a download URL where the reader app can be found.
 
@@ -43,9 +43,9 @@ If no such tag exists, this library defaults to using the download URLs for [Rai
 ## Programmatic Usage
 
 ```typescript
-// Pass one or more arguments to the Syndi.subscribe function
+// Pass one or more arguments to the SyndiButton.subscribe function
 // in order to display the dialog:
-Syndi.subscribe(
+SyndiButton.subscribe(
 	"http://a.com/path-to-feed/",
 	"http://b.com/path-to-feed/",
 	...
@@ -53,7 +53,7 @@ Syndi.subscribe(
 
 // Configure recommended readers:
 
-Syndi.setRecommendedReaders({
+SyndiButton.setRecommendedReaders({
 	ios: "https://itunes.apple.com/app/id1234",
 	android: "http://play.google.com/store/apps/details?id=com.app.name",
 	macos: "http://myapp.com/app.dmg",
@@ -61,5 +61,3 @@ Syndi.setRecommendedReaders({
 	linux: "http://myapp.com/app.tar.gz",
 });
 ```
-
-

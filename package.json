@@ -1,21 +1,21 @@
 {
-	"name": "htmlreels-subscribe",
+	"name": "syndi-button",
 	"author": "Paul Gordon",
-	"description": "Create HTML Reels subscribe buttons on websites",
+	"description": "Create buttons to subscribe to HTML Syndications on websites",
 	"version": "1.0.0",
 	"license": "MIT",
-	"main": "reels-subscribe.js",
-	"types": "reels-subscribe.d.ts",
+	"main": "syndi-button.js",
+	"types": "syndi-button.d.ts",
 	"files": [
-		"reels-subscribe.js",
-		"reels-subscribe.min.js",
-		"reels-subscribe.d.ts",
+		"syndi-button.js",
+		"syndi-button.min.js",
+		"syndi-button.d.ts",
 		"package.json"
 	],
 	"scripts": {
-		"bundle": "tsc -p tsconfig.release.json && terser ./+build/reels-subscribe.debug.js > ./+build/reels-subscribe.min.js",
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/syndi-button.debug.js > ./+build/syndi-button.min.js",
 		"test": "exit 0",
-		"esm": "sed 's/\"use strict\";/export/' ./+build/reels-subscribe.js > ./+build/reels-subscribe.esm.js",
+		"esm": "sed 's/\"use strict\";/export/' ./+build/syndi-button.js > ./+build/syndi-button.esm.js",
 		"release": "npm run bundle && cd ./+build && cp ../package.json ./package.json && np"
 	}
 }

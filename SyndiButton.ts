@@ -1,5 +1,5 @@
 
-namespace Reels
+namespace SyndiButton
 {
 	/** */
 	export async function subscribe(...feedUrls: string[])

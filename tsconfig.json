@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"outFile": "+build/reels-subscribe.debug.js",
+		"outFile": "+build/syndi-button.debug.js",
 		"composite": true,
 		"module": "system",
 		"moduleResolution": "node",

@@ -7,12 +7,9 @@
 	"main": "reels-subscribe.js",
 	"types": "reels-subscribe.d.ts",
 	"files": [
-		"reels.js",
-		"reels.min.js",
-		"reels.effects.js",
-		"reels.effects.min.js",
-		"reels.d.ts",
-		"reels.css",
+		"reels-subscribe.js",
+		"reels-subscribe.min.js",
+		"reels-subscribe.d.ts",
 		"package.json"
 	],
 	"scripts": {

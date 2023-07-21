@@ -16,7 +16,9 @@
 		"package.json"
 	],
 	"scripts": {
-		"bundle": "tsc -p tsconfig.release.json && terser ./+build/lib.debug.js > ./+build/lib.min.js",
-		"serve": "http-server --ssl --cert ./test/cert.pem --key ./test/key.pem"
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/reels-subscribe.debug.js > ./+build/reels-subscribe.min.js",
+		"test": "exit 0",
+		"esm": "sed 's/\"use strict\";/export/' ./+build/reels-subscribe.js > ./+build/reels-subscribe.esm.js",
+		"release": "npm run bundle && cd ./+build && cp ../package.json ./package.json && np"
 	}
 }

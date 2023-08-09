@@ -1,6 +1,6 @@
-# FeedClick
+# FeedButton
 
-This repository contains a library that renders *Subscribe* buttons on websites, allowing visitors to subscribe to feeds in the HTML Syndication format. The library displays a modal with a best-we-can-do UX, which asks the user if they have a compliant HTML Reader app installed, and gives them to the download page of a compliant app if they don't.
+This repository contains a library that renders *Subscribe* buttons on websites, allowing visitors to subscribe to HTML feeds. The library displays a modal with a best-we-can-do UX, which asks the user if they have a compliant HTML feed reader app installed, and gives them to the download page of a compliant app if they don't.
 
 ## Installation
 
@@ -24,7 +24,7 @@ You can subscribe to multiple feeds at once by specifying a space-separated list
 
 ## Changing The Recommended Reader
 
-In order for an end user to be able to subscribe to an HTML Syndication, they must have a compatible reader app installed on their device. You can configure what reader you recommend to your users by including a `<meta>` tag in the `<head>` section of your HTML, as shown below. 
+In order for an end user to be able to subscribe to an HTML feed, they must have a compatible reader app installed on their device. You can configure what reader you recommend to your users by including a `<meta>` tag in the `<head>` section of your HTML, as shown below. 
 
 The meta tag is a space-separated list of key=value pairs, where the key is a well-known string that specifies the platform, and the URL is a download URL where the reader app can be found.
 

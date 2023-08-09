@@ -1,7 +1,7 @@
 {
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
-		"outFile": "+build/syndi-button.js",
+		"outFile": "+build/feedbutton.js",
 	},
 	"exclude": [
 		"**/+build/**/*.ts",

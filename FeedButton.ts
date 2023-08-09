@@ -1,8 +1,16 @@
 
-namespace SyndiButton
+namespace FeedButton
 {
 	const attrName = "data-subscribe";
 	const metaKey = "recommended-readers";
+	
+	/**
+	 * The list of data types to attempt to copy to the clipboard.
+	 * 
+	 * Some browsers (Chrome) don't allow text/uri-list copied
+	 * on write, so we fall back to text/plain in this case.
+	 */
+	export const types = ["text/uri-list", "text/plain"];
 	
 	/** */
 	export async function subscribe(...feedUrls: string[])
@@ -10,13 +18,12 @@ namespace SyndiButton
 		if (feedUrls.length === 0)
 			return;
 		
+		feedUrls = feedUrls.map(url => "html://subscribe/" + url);
+		
 		const href = window.location.href;
 		feedUrls = feedUrls.map(s => new URL(s, href).toString());
 		const text = feedUrls.join("\n");
 		
-		// Some browsers (Chrome) don't allow text/uri-list copied
-		// on write, so we fall back to text/plain in this case.
-		const types = ["text/uri-list", "text/plain"];
 		for (const type of types)
 		{
 			try
@@ -79,7 +86,7 @@ namespace SyndiButton
 		// clipboard rather than relying only on the suffix of the HTML protocol. This is only to handle
 		// the case that the clipboard transfer fails--at least in this case, the first subscription URL will
 		// be transferred (and 99.99% of subscription cases will involve only a single source).
-		aYes.href = "html://subscribe/" + feedUrls[0];
+		aYes.href = feedUrls[0];
 		
 		const sn = aNo.style;
 		const sy = aYes.style;
@@ -226,4 +233,4 @@ namespace SyndiButton
 }
 
 //@ts-ignore
-if (typeof module === "object") Object.assign(module.exports, { Reels });
+if (typeof module === "object") Object.assign(module.exports, { FeedButton });

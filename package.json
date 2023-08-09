@@ -1,22 +1,22 @@
 {
-	"name": "syndi-button",
+	"name": "feedbutton",
 	"author": "Paul Gordon",
-	"description": "Create buttons to subscribe to HTML Syndications on websites",
+	"description": "Create buttons on websites to subscribe to HTML feeds.",
 	"version": "1.0.0",
 	"license": "MIT",
-	"main": "syndi-button.js",
-	"types": "syndi-button.d.ts",
+	"main": "feedbutton.js",
+	"types": "feedbutton.d.ts",
 	"files": [
-		"syndi-button.js",
-		"syndi-button.min.js",
-		"syndi-button.d.ts",
-		"syndi-button.d.ts.map",
+		"feedbutton.js",
+		"feedbutton.min.js",
+		"feedbutton.d.ts",
+		"feedbutton.d.ts.map",
 		"package.json"
 	],
 	"scripts": {
-		"bundle": "tsc -p tsconfig.release.json && terser ./+build/syndi-button.debug.js > ./+build/syndi-button.min.js",
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/feedbutton.debug.js > ./+build/feedbutton.min.js",
 		"test": "exit 0",
-		"esm": "sed 's/\"use strict\";/export/' ./+build/syndi-button.js > ./+build/syndi-button.esm.js",
+		"esm": "sed 's/\"use strict\";/export/' ./+build/feedbutton.js > ./+build/feedbutton.esm.js",
 		"release": "npm run bundle && cd ./+build && cp ../package.json ./package.json && np"
 	}
 }

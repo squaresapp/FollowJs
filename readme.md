@@ -1,4 +1,4 @@
-# Syndi Button
+# FeedClick
 
 This repository contains a library that renders *Subscribe* buttons on websites, allowing visitors to subscribe to feeds in the HTML Syndication format. The library displays a modal with a best-we-can-do UX, which asks the user if they have a compliant HTML Reader app installed, and gives them to the download page of a compliant app if they don't.
 
@@ -43,9 +43,9 @@ If no such tag exists, this library defaults to using the download URLs for [Rai
 ## Programmatic Usage
 
 ```typescript
-// Pass one or more arguments to the SyndiButton.subscribe function
+// Pass one or more arguments to the FeedButton.subscribe function
 // in order to display the dialog:
-SyndiButton.subscribe(
+FeedButton.subscribe(
 	"http://a.com/path-to-feed/",
 	"http://b.com/path-to-feed/",
 	...
@@ -53,7 +53,7 @@ SyndiButton.subscribe(
 
 // Configure recommended readers:
 
-SyndiButton.setRecommendedReaders({
+FeedButton.setRecommendedReaders({
 	ios: "https://itunes.apple.com/app/id1234",
 	android: "http://play.google.com/store/apps/details?id=com.app.name",
 	macos: "http://myapp.com/app.dmg",

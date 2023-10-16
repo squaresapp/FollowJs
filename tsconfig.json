@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"outFile": "+build/feebutton.debug.js",
+		"outFile": "+build/follow.debug.js",
 		"composite": true,
 		"module": "system",
 		"moduleResolution": "node",

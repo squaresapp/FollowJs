@@ -1,7 +1,7 @@
 {
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
-		"outFile": "+build/feedbutton.js",
+		"outFile": "+build/follow.js",
 	},
 	"exclude": [
 		"**/+build/**/*.ts",

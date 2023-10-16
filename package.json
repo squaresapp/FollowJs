@@ -1,22 +1,22 @@
 {
-	"name": "feedbutton",
+	"name": "followjs",
 	"author": "Paul Gordon",
-	"description": "Create buttons on websites to subscribe to HTML feeds.",
+	"description": "Create buttons to follow HTML feeds from websites.",
 	"version": "1.0.0",
 	"license": "MIT",
-	"main": "feedbutton.js",
-	"types": "feedbutton.d.ts",
+	"main": "follow.js",
+	"types": "follow.d.ts",
 	"files": [
-		"feedbutton.js",
-		"feedbutton.min.js",
-		"feedbutton.d.ts",
-		"feedbutton.d.ts.map",
+		"follow.js",
+		"follow.min.js",
+		"follow.d.ts",
+		"follow.d.ts.map",
 		"package.json"
 	],
 	"scripts": {
-		"bundle": "tsc -p tsconfig.release.json && terser ./+build/feedbutton.debug.js > ./+build/feedbutton.min.js",
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/follow.debug.js > ./+build/follow.min.js",
 		"test": "exit 0",
-		"esm": "sed 's/\"use strict\";/export/' ./+build/feedbutton.js > ./+build/feedbutton.esm.js",
+		"esm": "sed 's/\"use strict\";/export/' ./+build/follow.js > ./+build/follow.esm.js",
 		"release": "npm run bundle && cd ./+build && cp ../package.json ./package.json && np"
 	}
 }

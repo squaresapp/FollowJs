@@ -1,7 +1,7 @@
 
-namespace FeedButton
+namespace Follow
 {
-	const attrName = "data-subscribe";
+	const attrName = "data-follow";
 	const metaKey = "recommended-readers";
 	
 	/**
@@ -12,13 +12,15 @@ namespace FeedButton
 	 */
 	export const types = ["text/uri-list", "text/plain"];
 	
-	/** */
-	export async function subscribe(...feedUrls: string[])
+	/**
+	 * Opens a follow dialog.
+	 */
+	export async function open(...feedUrls: string[])
 	{
 		if (feedUrls.length === 0)
 			return;
 		
-		feedUrls = feedUrls.map(url => "html://subscribe/" + url);
+		feedUrls = feedUrls.map(url => "html://follow/" + url);
 		
 		const href = window.location.href;
 		feedUrls = feedUrls.map(s => new URL(s, href).toString());
@@ -71,7 +73,7 @@ namespace FeedButton
 		}
 		
 		const p = document.createElement("p");
-		p.textContent = "You need an HTML reader app to subscribe. Do you have one?";
+		p.textContent = "You need an HTML feed reader app. Do you have one?";
 		p.style.marginTop = "0";
 		
 		const aNo = document.createElement("a");
@@ -84,8 +86,8 @@ namespace FeedButton
 		// The first feed URL is placed at the end of the html:// URI, but this is only as an insurance
 		// measure. The URLs are copied to the clipboard, and the recipient apps should examine the
 		// clipboard rather than relying only on the suffix of the HTML protocol. This is only to handle
-		// the case that the clipboard transfer fails--at least in this case, the first subscription URL will
-		// be transferred (and 99.99% of subscription cases will involve only a single source).
+		// the case that the clipboard transfer fails--at least in this case, the first follow URL will
+		// be transferred (and 99.99% of follows will involve only a single source).
 		aYes.href = feedUrls[0];
 		
 		const sn = aNo.style;
@@ -215,7 +217,7 @@ namespace FeedButton
 		{
 			const attr = anchor.getAttribute(attrName) || "";
 			const urls = attr.split(/\s+/g);
-			subscribe(...urls);
+			open(...urls);
 		});
 	}
 	
@@ -233,4 +235,4 @@ namespace FeedButton
 }
 
 //@ts-ignore
-if (typeof module === "object") Object.assign(module.exports, { FeedButton });
+if (typeof module === "object") Object.assign(module.exports, { Follow });

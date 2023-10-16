@@ -7,7 +7,7 @@ This repository contains a library that renders *Follow* buttons on websites, al
 Paste this script tag at the **bottom** of your HTML page:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/followjs/follow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/follow-lib/follow.min.js"></script>
 ```
 
 In order to create a button, create a hyperlink with the `data-follow` attribute populated the feed URLs as shown below:

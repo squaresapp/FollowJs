@@ -1,5 +1,5 @@
 {
-	"name": "followjs",
+	"name": "follow-lib",
 	"author": "Paul Gordon",
 	"description": "Create buttons to follow HTML feeds from websites.",
 	"version": "1.0.0",

@@ -187,8 +187,6 @@ namespace Follow
 		return document.head.querySelector(`META[name=${metaKey}]`);
 	}
 	
-	
-	
 	/** */
 	const defaultReaders: IReaders = {
 		ios: "",

@@ -20,7 +20,7 @@ namespace Follow
 		if (feedUrls.length === 0)
 			return;
 		
-		feedUrls = feedUrls.map(url => "html://follow/" + url);
+		feedUrls = feedUrls.map(url => "html://follow?" + url);
 		
 		const href = window.location.href;
 		feedUrls = feedUrls.map(s => new URL(s, href).toString());

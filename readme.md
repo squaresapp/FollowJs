@@ -2,6 +2,8 @@
 
 This repository contains a library that renders *Follow* buttons on websites, allowing visitors to follow HTML feeds. The library displays a modal with a best-we-can-do UX, which asks the user if they have a compliant HTML feed reader app installed, and gives them to the download page of a compliant app if they don't.
 
+You can see the official HTML Feeds specification at: [https://www.scrollapp.org/specs/htmlfeeds/](https://www.scrollapp.org/specs/htmlfeeds/)
+
 ## Installation
 
 Paste this script tag at the **bottom** of your HTML page:

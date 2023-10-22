@@ -2,7 +2,7 @@
 	"name": "follow-lib",
 	"author": "Paul Gordon",
 	"description": "Create buttons to follow HTML feeds from websites.",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"license": "MIT",
 	"main": "follow.js",
 	"types": "follow.d.ts",

@@ -1,4 +1,6 @@
-# FollowJs
+# This project has been deprecated. Please see [Webfeed-follow](https://github.com/squaresapp/webfeed-follow) instead.
+
+
 
 This repository contains a library that renders *Follow* buttons on websites, allowing visitors to follow HTML feeds. The library displays a modal with a best-we-can-do UX, which asks the user if they have a compliant HTML feed reader app installed, and gives them to the download page of a compliant app if they don't.
 
